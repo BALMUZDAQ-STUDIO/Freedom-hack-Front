@@ -11,7 +11,6 @@ const App = () => {
                 <Route path="/login" element={<Login/>}/>
                 <Route path="/" element={<Home/>} />
                 <Route path="/settings" element={<Settings/>} />
-                <Route path="/files" element={<Files/>} />
                 <Route path="/upload" element={<Upload/>} />
                 <Route path="/profile/:id" element={<Profile/>} />
                 <Route path="*" element={<div className='text-3xl'>Not Found</div>}/>
