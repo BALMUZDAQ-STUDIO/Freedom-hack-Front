@@ -17,7 +17,7 @@ const Header = () => {
         <div className=" flex text-[20px] font-bold text-main w-[20vw] justify-between ml-[50vw] items-center">
             <Link to="/">Home</Link>
             <Link to="/favorites">Favorites</Link>
-            <Link to="/files">Upload</Link>
+            <Link to="/upload">Upload</Link>
             <Link to="/create">Create</Link>
         </div>
         <CustomButton title="Log out" containerStyles="border-red-600 w-[130px] h-[50px] ml-8" textStyles="text-red-600 text-[16px] font-semibold" handlePress={handleLogout}/>
