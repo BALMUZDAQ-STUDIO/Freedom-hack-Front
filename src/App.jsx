@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { useGlobalContext } from './lib/context.jsx';
-import {Home, Login, Settings, Files, Profile} from "./pages/index.js"
+import {Home, Login, Settings, Files, Profile, Upload} from "./pages/index.js"
 
 
 const App = () => {
@@ -12,6 +12,7 @@ const App = () => {
                 <Route path="/" element={<Home/>} />
                 <Route path="/settings" element={<Settings/>} />
                 <Route path="/files" element={<Files/>} />
+                <Route path="/upload" element={<Upload/>} />
                 <Route path="/profile/:id" element={<Profile/>} />
                 <Route path="*" element={<div className='text-3xl'>Not Found</div>}/>
             </Routes>

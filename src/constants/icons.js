@@ -5,6 +5,8 @@ import search from "../../public/assets/icons/search.svg"
 import clear from "../../public/assets/icons/clear.svg"
 import star from "../../public/assets/icons/star.svg"
 import star_active from "../../public/assets/icons/star_active.svg"
+import uploadFile from "../../public/assets/icons/file-icon.svg";
+import fileIcon from "../../public/assets/icons/miniFile-icon.svg";
 
  export default { 
     logo,
@@ -13,5 +15,7 @@ import star_active from "../../public/assets/icons/star_active.svg"
     search,
     clear,
     star,
-    star_active
+    star_active,
+    uploadFile,
+    fileIcon
 };
