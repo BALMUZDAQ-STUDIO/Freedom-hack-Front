@@ -5,7 +5,7 @@ import {Home, Login, Settings, Files, Profile} from "./pages/index.js"
 import { AppContext } from './lib/context.jsx';
 
 const App = () => {
-const {isLogin} = useMyGlobalContext();
+const {isLogin} = false;
 
     return(
     <Router>
