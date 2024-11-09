@@ -1,8 +1,10 @@
 import React from 'react'
-
+import Footer from '../modules/Footer'
 function Settings() {
   return (
-    <div>Settings</div>
+    <div>
+      <Footer/>
+    </div>
   )
 }
 

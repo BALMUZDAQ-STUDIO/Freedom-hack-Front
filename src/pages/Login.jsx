@@ -1,9 +1,20 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {icons} from "../constants/index.js"
+import { useGlobalContext } from '../lib/context.jsx'
+
+
 
 function Login() {
+  const {setIsLogin} = useGlobalContext();
+  const [login, setLogin] = useState();
+  const [password, setPassword] = useState();
+  const handlePress = () =>{
+    
+    setIsLogin(true);
+  }
+
   return (
-    <div className='w-[1000px] h-[1000px] bg-red-900'>
+    <div className=''>
       <img src={icons.logo}/>
     </div>
   )

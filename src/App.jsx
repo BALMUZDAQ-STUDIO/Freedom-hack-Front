@@ -1,26 +1,22 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { useMyGlobalContext } from './lib/context.jsx';
+import { useGlobalContext } from './lib/context.jsx';
 import {Home, Login, Settings, Files, Profile} from "./pages/index.js"
-import { AppContext } from './lib/context.jsx';
+
 
 const App = () => {
-const {isLogin} = useMyGlobalContext();
+const {isLogin} = useGlobalContext();
 
     return(
-    <Router>
-        <AppContext>
-            {isLogin ?
-            <Routes>
-                <Route path="/login" element={<LoginPage />} />
-                <Route path="/" element={<HomePage />} />
-            </Routes>:
-            <Routes>
-            <Route path="*" element={<Login/>} />
-        </Routes>
-            }
-        </AppContext>
-    </Router>
+
+        <Routes>
+                <Route path="/login" element={<Login/>}/>
+                <Route path="/" element={<Home/>} />
+                <Route path="/settings" element={<Settings/>} />
+                <Route path="/files" element={<Files/>} />
+                <Route path="/profile/:id" element={<Profile/>} />
+                <Route path="*" element={<div className='text-3xl'>Not Found</div>}/>
+            </Routes>
 )};
 
 export default App;
