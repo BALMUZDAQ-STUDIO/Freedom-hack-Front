@@ -8,7 +8,7 @@ const SearchField = () => {
   
   const inputHandler = (e) => {
       const lowerCase = e.target.value.toLowerCase();
-      setQuery(lowerCase);  // Теперь корректно обновляет query
+      setQuery(lowerCase);
   };
 
   const clear = () => {

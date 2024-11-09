@@ -34,7 +34,7 @@ function Home() {
           rank={"85"}
           city={"Almaty"}
           date={"November 8, 2024"}
-          skils={[{title:"UX/UI", color:"bg-[#5E97FF]"},{title:"Python", color:"bg-[#7BC308]"},{title:"C++", color:"bg-[#FF6E5E]"}]}
+          skils={[{title:"Programmer", color:"bg-[#5E97FF]"},{title:"Project Admin", color:"bg-[#7BC308]"},{title:"Researcher", color:"bg-[#FF6E5E]"}]}
         />
     </div>
     </main>
