@@ -1,8 +1,11 @@
 import React from 'react'
+import Footer from '../modules/Footer'
 
 function Files() {
   return (
-    <div>Files</div>
+    <div>
+      <Footer/>
+    </div>
   )
 }
 

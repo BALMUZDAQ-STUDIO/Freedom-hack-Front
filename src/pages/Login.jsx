@@ -1,16 +1,26 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 import {icons} from "../constants/index.js"
-import {CustomButton} from '../UI/index.js'
+import { useGlobalContext } from '../lib/context.jsx'
+
+
 
 function Login() {
+  const {setIsLogin} = useGlobalContext();
+  const [login, setLogin] = useState();
+  const [password, setPassword] = useState();
   const [isPasswordVisible, setIsPasswordVisible] = useState(false);
 
   const togglePasswordVisibility = () => {
     setIsPasswordVisible(prevState => !prevState);
   };
 
+  const handlePress = () =>{
+    
+    setIsLogin(true);
+  }
+
   return (
-      <div>
+    <div>
         <div>
           <img src={icons.logo} className="w-[240px] h-auto mt-[40px] ml-[64px]"/>
         </div>
