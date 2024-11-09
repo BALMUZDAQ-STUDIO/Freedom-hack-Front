@@ -1,13 +1,14 @@
 import React, { useEffect } from 'react'
 import Header from '../modules/Header'
 import VacancyCard from '../components/VacancyCard';
+import { useGlobalContext } from '../lib/context';
 
 const arr=[1,2,3,4,5];
 function Home() {
+  const {isLogin} = useGlobalContext();
 
   useEffect(()=>{
-    
-    console.log(arr)
+    console.log(isLogin);
   },[])
 
   return (

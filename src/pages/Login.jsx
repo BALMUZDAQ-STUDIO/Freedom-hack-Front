@@ -2,11 +2,11 @@ import React, { useState } from 'react'
 import {icons} from "../constants/index.js"
 import { useGlobalContext } from '../lib/context.jsx'
 import {CustomButton} from "../UI/index.js"
-
+import {authorizeUser} from "../lib/api.js"
 
 
 function Login() {
-  const {setIsLogin} = useGlobalContext();
+  const {isLogin, setIsLogin} = useGlobalContext();
   const [login, setLogin] = useState();
   const [password, setPassword] = useState();
   const [isPasswordVisible, setIsPasswordVisible] = useState(false);
@@ -15,10 +15,19 @@ function Login() {
     setIsPasswordVisible(prevState => !prevState);
   };
 
-  const handlePress = () =>{
-    
-    setIsLogin(true);
-  }
+  const handleLogin = async () => {
+    try {
+      const token = await authorizeUser({ login, password });
+      if (token) {
+        setIsLogin(true);
+        console.log("Авторизация успешна:", isLogin);
+      } else {
+        console.log("Неверный логин или пароль");
+      }
+    } catch (error) {
+      console.error("Ошибка авторизации:", error);
+    }
+  };
 
   return (
     <div>
@@ -40,9 +49,11 @@ function Login() {
                 height="24px"
               />
             </button>
-          </div>
+          </div >
+          <div className="flex justify-end mt-2">
           <a href="#" className='text-right text-[#CDCDCD] hover:text-black active:text-black text-[17px] transition easy-linear font-bold'>Forgot password?</a>
-          <CustomButton title = "Log in" containerStyles='mt-[25px]'/>
+          </div>
+          <CustomButton title = "Log in" containerStyles='w-[360px] h-[72px] mt-8' handlePress={handleLogin}/>
         </div>
       </div>
   )

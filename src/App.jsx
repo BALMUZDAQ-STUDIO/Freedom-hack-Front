@@ -5,8 +5,6 @@ import {Home, Login, Settings, Files, Profile} from "./pages/index.js"
 
 
 const App = () => {
-const {isLogin} = useGlobalContext();
-
     return(
 
         <Routes>

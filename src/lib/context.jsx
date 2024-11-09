@@ -1,5 +1,5 @@
 import {createContext, useContext, useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { Route, useNavigate } from "react-router-dom";
 
 const GlobalContext = createContext();
 
@@ -14,8 +14,9 @@ export const AppContext = ({children}) => {
     useEffect(() => {
       if (!isLogin) {
           navigate('/login');
+      }else if( window.location.pathname === '/login'){
+        navigate('/')
       }
-      console.log(isLogin)
   }, [isLogin, navigate]);
     
   return (
