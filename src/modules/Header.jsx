@@ -20,7 +20,7 @@ const Header = () => {
             <Link to="/files">Upload</Link>
             <Link to="/create">Create</Link>
         </div>
-        <CustomButton title="Log out" containerStyles="border-red-600 w-[130px] h-[50px]" textStyles="text-red-600 text-[16px] font-semibold" handlePress={handleLogout}/>
+        <CustomButton title="Log out" containerStyles="border-red-600 w-[130px] h-[50px] ml-8" textStyles="text-red-600 text-[16px] font-semibold" handlePress={handleLogout}/>
     </header>
   )
 }

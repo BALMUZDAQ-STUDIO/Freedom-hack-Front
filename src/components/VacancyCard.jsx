@@ -3,8 +3,9 @@ import { CustomButton } from '../UI/index.js'
 
 const VacancyCard = ({profession, salary, properties, city, candidatesCount}) => {
   return (
-    <div className='w-[1200px] h-[240px] border-solid border-[6px] border-main bg-[#F1F1F1] rounded-[32px] ml-[15px]'>
-        <div className='ml-[32px]'>
+<div className='w-[1200px] h-[240px] border-solid border-[3px] border-main bg-[#F1F1F1] rounded-[32px] ml-[15px]'>
+        <div className='ml-[32px] mb-[18px]'>
+    
           <div className='flex mt-[15px]'>
             <h1 className='text-[34px] font-inter font-extrabold'>{profession}</h1>
             <p className='text-[16px] text-[#9A9A9A] ml-[735px] font-[700]'>{candidatesCount} candidates left</p>

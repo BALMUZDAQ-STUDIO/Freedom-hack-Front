@@ -1,5 +1,5 @@
 import React from 'react'
-import Header from '../modules/Header'
+import {SearchField, Header} from "../modules/index.js"
 
 function Files() {
   return (
