@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import {icons} from "../constants/index.js"
 import { useGlobalContext } from '../lib/context.jsx'
+import {CustomButton} from "../UI/index.js"
 
 
 

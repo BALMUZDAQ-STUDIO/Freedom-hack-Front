@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import Footer from '../modules/Footer'
+import Header from '../modules/Header'
 import VacancyCard from '../components/VacancyCard';
 
 const arr=[1,2,3,4,5];
@@ -12,7 +12,7 @@ function Home() {
 
   return (
     <main>
-    <Footer/>
+    <Header/>
     <div className='flex flex-col gap-4'>
       {arr.map((i)=>(
         <VacancyCard key={i}/>

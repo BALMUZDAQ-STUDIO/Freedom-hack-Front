@@ -1,10 +1,10 @@
 import React from 'react'
-import Footer from '../modules/Footer'
+import Header from '../modules/Header'
 
 function Files() {
   return (
     <div>
-      <Footer/>
+      <Header/>
     </div>
   )
 }

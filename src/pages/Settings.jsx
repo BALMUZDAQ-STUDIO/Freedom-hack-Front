@@ -1,9 +1,9 @@
 import React from 'react'
-import Footer from '../modules/Footer'
+import Header from '../modules/Header'
 function Settings() {
   return (
     <div>
-      <Footer/>
+      <Header/>
     </div>
   )
 }
