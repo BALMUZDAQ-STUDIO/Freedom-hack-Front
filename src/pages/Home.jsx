@@ -1,12 +1,10 @@
-import React, { useEffect } from 'react'
-import Header from '../modules/Header'
 import React, { useEffect, useState } from 'react'
 
 import VacancyCard from '../components/VacancyCard';
 import CandidateCard from '../components/CandidateCard';
 import { useGlobalContext } from '../lib/context';
 import {SearchField, Header} from "../modules/index.js"
-import {icons} from "../constants/index.js";
+import {icons,images} from "../constants/index.js";
 const arr=[1,2,3,4,5];
 function Home() {
   const {isLogin} = useGlobalContext();
@@ -25,16 +23,18 @@ function Home() {
           properties={"3 year experience"}
           city={"Almaty"}
           candidatesCount={100}
+          
         />
       ))}
       <CandidateCard 
-          avatarSrc={icons.avatar}
+          avatarSrc={images.avatar}
           name={"Daler Achmedov"}
           profession={"UX/UI Designer"}
           experience={"3 years"}
           rank={"85"}
           city={"Almaty"}
           date={"November 8, 2024"}
+          skils={[{title:"UX/UI", color:"bg-[#5E97FF]"},{title:"Python", color:"bg-[#7BC308]"},{title:"C++", color:"bg-[#FF6E5E]"}]}
         />
     </div>
     </main>

@@ -1,7 +1,10 @@
 import logo from "../../public/assets/icons/logo.svg";
 import eyeClose from "../../public/assets/icons/eye-close.svg";
-import avatar from "../../public/assets/icons/images/avatar.png";
 import eyeOpen from "../../public/assets/icons/eye-open.svg";
+import search from "../../public/assets/icons/search.svg"
+import clear from "../../public/assets/icons/clear.svg"
+import star from "../../public/assets/icons/star.svg"
+import star_active from "../../public/assets/icons/star_active.svg"
 
  export default { 
     logo,
@@ -9,5 +12,6 @@ import eyeOpen from "../../public/assets/icons/eye-open.svg";
     eyeOpen,
     search,
     clear,
-    avatar
+    star,
+    star_active
 };
