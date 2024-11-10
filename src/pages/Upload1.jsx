@@ -77,7 +77,7 @@ function Upload1() {
                     <img key={index} src={icons.fileIcon} className="h-[24px]"/>
                     <p className="text-[14px] font-bold ml-[12px]">{file.name}</p>
                     <p className="text-[14px] font-semibold ml-[125px] mt-[1px]" >Loaded</p>
-                    <progress value={uploadProgress} max="100" className="bg-[#055532] mt-[2px] ml-[5px] w-[500px]"></progress>
+                    <progress value={uploadProgress} max="100" className="bg-[#44CA85] mt-[2px] ml-[5px] w-[500px]"></progress>
                   </div>
                 ))}
           </div>
