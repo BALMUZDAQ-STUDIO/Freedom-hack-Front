@@ -82,7 +82,7 @@ function Upload1() {
                 ))}
           </div>
           <div className="flex justify-center mt-[25px]">
-            <CustomButton title = "Analysis" containerStyles={"w-[256px] h-[64px] border-[0px] bg-[seagreen]"} textStyles={"text-white text-[24px]"}/>
+            <CustomButton title = "Analysis" containerStyles={"w-[256px] h-[64px] border-[0px] bg-[#055532]"} textStyles={"text-white text-[24px]"}/>
           </div>
     </main>
     );
