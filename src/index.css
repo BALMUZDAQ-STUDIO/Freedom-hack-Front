@@ -9,3 +9,42 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
+
+/* Основные стили для заголовков */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  margin: 0.25em 0;
+  line-height: 1.2;
+  color: #333; /* Темный цвет для контраста */
+}
+
+/* Стили для h1 */
+h1 {
+  font-size: 2.5em; /* Примерно 40px */
+}
+
+/* Стили для h2 */
+h2 {
+  font-size: 2em; /* Примерно 32px */
+}
+
+/* Стили для h3 */
+h3 {
+  font-size: 1.75em; /* Примерно 28px */
+}
+
+/* Стили для h4 */
+h4 {
+  font-size: 1.5em; /* Примерно 24px */
+}
+
+/* Стили для h5 */
+h5 {
+  font-size: 1.25em; /* Примерно 20px */
+}
+
+/* Стили для h6 */
+h6 {
+  font-size: 1em; /* Примерно 16px */
+}
+

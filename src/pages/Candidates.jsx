@@ -6,32 +6,30 @@ import { useGlobalContext } from "../lib/context";
 import { SearchField, Header } from "../modules/index.js";
 import { icons, images } from "../constants/index.js";
 function Candidates() {
-    const arr = [1, 2, 3, 4, 5];
+    const [data,setData] = useState([])
     const params = useParams();
+    useEffect(()=>{
+        const preData = getVacancies();
+        setData(preData["vacancies"]);
+        console.log(data);
+      },[])
     return (
         <main >
             <Header />
             <SearchField />
             <div className="flex flex-row-reverse  justify-end  gap-4 mr-[3vw]">
                 <div className="flex flex-col gap-4">
-                    {arr.map((i) => (
+                    {data.map((i) => (
                         <CandidateCard
                             avatarSrc={images.avatar}
-                            name={"Daler Achmedov"}
-                            profession={"UX/UI Designer"}
-                            experience={"3 years"}
-                            rank={"85"}
-                            city={"Almaty"}
-                            date={"November 8, 2024"}
-                            skils={[
-                                { title: "Programmer", color: "bg-[#5E97FF]" },
-                                {
-                                    title: "Project Admin",
-                                    color: "bg-[#7BC308]",
-                                },
-                                { title: "Researcher", color: "bg-[#FF6E5E]" },
-                            ]}
-                            id={"2"}
+                            name={data.name}
+                            profession={data.profession}
+                            experience={data.experience}
+                            rank={data.rank}
+                            city={data.locate}
+                            date={data.date}
+                            skils={data.skils}
+                            id={data.id}
                         />
                     ))}
                 </div>

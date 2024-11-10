@@ -5,28 +5,30 @@ import CandidateCard from '../components/CandidateCard';
 import { useGlobalContext } from '../lib/context';
 import {SearchField, Header} from "../modules/index.js"
 import {icons,images} from "../constants/index.js";
-const arr=[1,2,3,4,5];
+import {getVacancies} from "../lib/api.js"
 function Home() {
-
-
+  const [data,setData] = useState([])
+  useEffect(()=>{
+    const preData = getVacancies();
+    setData(preData["vacancies"]);
+    console.log(data);
+  },[])
   return (
     <main>
     <Header/>
     <SearchField/>
     <div className='flex flex-col items-center gap-8 mr-[3vw]'>
-      {arr.map((i)=>(
+      {data.map((i)=>(
         <VacancyCard 
           key={i} 
-          profession={"C# programmer"}
-          salary={"from 2000$"}
-          properties={"3 year experience"}
-          city={"Almaty"}
-          candidatesCount={100}
-          id={"2"}
-          
+          profession={data.profession}
+          salary={data.salary}
+          properties={data.properties}
+          city={data.locate}
+          candidatesCount={data.candidatesCount}
+          id={data.id}
         />
       ))}
-
     </div>
     </main>
   )

@@ -20,14 +20,14 @@ const SearchField = () => {
       <div className={`relative w-full max-w-[800px] h-16 bg-[#f2f2f2] rounded-full flex items-center px-6 `}>
       <img
       className={`w-6 h-6 mr-4`}
-      src={icons.search} // Assuming the search icon is an SVG
+      src={icons.search} 
       alt="Search"
     />
     
       <input className="w-full h-full focus:outline-0 bg-[#f2f2f2] text-main font-bold text-base" placeholder="Type something to search..." onChange={inputHandler} value={query} />
       <img
       className={`w-6 h-6 ml-auto cursor-pointer`}
-      src={icons.clear} // Assuming the close icon is an SVG
+      src={icons.clear} 
       alt="Clear"
       onClick={clear}
       

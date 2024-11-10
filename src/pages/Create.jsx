@@ -50,7 +50,7 @@ function Create() {
             <p className="text-[#055532] text-[64px] text-center font-bold">
                 Create vacancy
             </p>
-            <form onSubmit={(e) => e.preventDefault()} >
+            <form onSubmit={(e) => e.preventDefault()}>
                 <div className="flex ">
                     <div>
                         <div className="ml-6">
@@ -192,7 +192,7 @@ function Create() {
                         <div className="flex justify-end mt-4">
                             <CustomButton
                                 title="Create vacancy"
-                                containerStyles="bg-[#055532] py-2 px-6"
+                                containerStyles="!bg-[#055532] py-2 px-6"
                                 textStyles="text-white"
                             />
                         </div>
