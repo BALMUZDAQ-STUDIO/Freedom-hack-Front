@@ -7,11 +7,9 @@ import { AppContext } from './lib/context.jsx';
 
 
 createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
     <BrowserRouter>
     <AppContext>
     <App/>
   </AppContext>
   </BrowserRouter>
-  </React.StrictMode>
 );
