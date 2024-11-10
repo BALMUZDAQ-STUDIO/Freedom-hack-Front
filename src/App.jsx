@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { useGlobalContext } from './lib/context.jsx';
-import {Home, Login, Settings, Files, Profile, Upload} from "./pages/index.js"
+import {Home, Login, Settings, Profile, Upload} from "./pages/index.js"
 
 
 const App = () => {

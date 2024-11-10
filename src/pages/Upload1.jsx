@@ -73,15 +73,16 @@ function Upload1() {
                 <input type="file" onChange={handleMultipleChange} multiple hidden />
               </label>
                 {files.map((file, index) => (
-                  <div className="flex justify-center align-center w-[800px] h-[24px] ">
+                  <div className="flex justify-center align-center w-[800px] h-[auto] mt-[15px] bg-[#E3E3E3] pt-[5px] pb-[5px] ml-[15px] rounded-[25px]">
                     <img key={index} src={icons.fileIcon} className="h-[24px]"/>
-                    <p className="text-[10px] font-bold mb-[24px] ml-[8px]">{file.name}</p>
-                    <progress value={uploadProgress} max="100" className="bg-[#055532]"></progress>
+                    <p className="text-[14px] font-bold ml-[12px]">{file.name}</p>
+                    <p className="text-[14px] font-semibold ml-[125px] mt-[1px]" >Loaded</p>
+                    <progress value={uploadProgress} max="100" className="bg-[#055532] mt-[2px] ml-[5px] w-[500px]"></progress>
                   </div>
                 ))}
           </div>
           <div className="flex justify-center mt-[25px]">
-            <CustomButton title = "Analysis" containerStyles={"w-[256px] h-[64px] border-0 bg-[#055532]"} textStyles={"text-white text-[24px] text-"}/>
+            <CustomButton title = "Analysis" containerStyles={"w-[256px] h-[64px] border-[0px] bg-[seagreen]"} textStyles={"text-white text-[24px]"}/>
           </div>
     </main>
     );
