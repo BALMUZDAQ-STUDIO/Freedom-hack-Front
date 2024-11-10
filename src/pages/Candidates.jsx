@@ -5,15 +5,13 @@ import CandidateCard from "../components/CandidateCard";
 import { useGlobalContext } from "../lib/context";
 import { SearchField, Header } from "../modules/index.js";
 import { icons, images } from "../constants/index.js";
-
-const Favorites = () => {
-  const arr = [1, 2, 3, 4, 5];
+function Candidates() {
+    const arr = [1, 2, 3, 4, 5];
     const params = useParams();
     return (
         <main >
             <Header />
             <SearchField />
-
             <div className="flex flex-row-reverse  justify-end  gap-4 mr-[3vw]">
                 <div className="flex flex-col gap-4">
                     {arr.map((i) => (
@@ -172,4 +170,4 @@ const Favorites = () => {
     );
 }
 
-export default Favorites
+export default Candidates;

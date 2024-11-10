@@ -24,7 +24,7 @@ const SearchField = () => {
       alt="Search"
     />
     
-      <input className="w-full h-full focus:outline-0 bg-[#f2f2f2] text-black font-bold text-base" placeholder="Type something to search..." onChange={inputHandler} value={query} />
+      <input className="w-full h-full focus:outline-0 bg-[#f2f2f2] text-main font-bold text-base" placeholder="Type something to search..." onChange={inputHandler} value={query} />
       <img
       className={`w-6 h-6 ml-auto cursor-pointer`}
       src={icons.clear} // Assuming the close icon is an SVG

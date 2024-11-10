@@ -63,7 +63,7 @@ function Upload1() {
     return (
       <main>
         <Header/>
-        <h2 className="text-center text-[64px] font-bold mb-[25px] text-[#055532]">Upload files</h2>
+        <h2 className="text-center text-[64px] font-bold mb-[25px] text-[#055532]">Upload files | Create Cantidates</h2>
         <div className="flex justify-center text-center align-center w-[800px] h-auto flex-col ml-auto mr-auto mt-">
               <label className="block">
                 <div className="bg-[#F2F2F2] border-[3px] border-[#055532] border-dashed ml-[15px] w-[800px] h-[400px] rounded-[48px] cursor-pointer">

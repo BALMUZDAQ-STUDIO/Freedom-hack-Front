@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Header } from "../modules";
 import { icons } from "../constants/index.js";
 import { CustomButton } from "../UI";
+
 function Create() {
     const [name, setName] = useState("");
 
@@ -49,7 +50,7 @@ function Create() {
             <p className="text-[#055532] text-[64px] text-center font-bold">
                 Create vacancy
             </p>
-            <form>
+            <form onSubmit={(e) => e.preventDefault()} >
                 <div className="flex ">
                     <div>
                         <div className="ml-6">
@@ -57,7 +58,7 @@ function Create() {
                                 Vacancy name
                             </p>
                             <input
-                                className="bg-[#F2F2F2] rounded-[80px] h-[80px] w-[640px] text-[24px] font-bold pl-5 focus:outline-[#055532]"
+                                className="bg-[#F2F2F2] rounded-[80px] h-[80px] w-[640px] text-[#055532] [text-[24px] font-bold pl-5 focus:outline-[#055532]"
                                 placeholder="Enter vacancy name..."
                             />
                         </div>
@@ -72,7 +73,7 @@ function Create() {
                                 />
                                 <div className="h-1 w-2 bg-[#055532]"></div>
                                 <input
-                                    className="bg-[#F2F2F2] rounded-[80px] h-[80px] w-[172px] text-[24px] font-bold pl-5 focus:outline-[#055532] ml-2"
+                                    className="bg-[#F2F2F2] rounded-[80px] text-[#055532] h-[80px] w-[172px] text-[24px] font-bold pl-5 focus:outline-[#055532] ml-2"
                                     placeholder="To"
                                 />
                                 <p className="font-bold text-[30px] m-2">$</p>
@@ -97,7 +98,7 @@ function Create() {
                             </p>
                             <div className="flex flex-row gap-2 items-center">
                                 <input
-                                    className="bg-[#F2F2F2] rounded-[80px] h-[50px] w-[150px] text-[16px] font-bold pl-5 focus:outline-[#055532] "
+                                    className="bg-[#F2F2F2] rounded-[80px]  text-[#055532] h-[50px] w-[150px] text-[16px] font-bold pl-5 focus:outline-[#055532] "
                                     type="text"
                                     value={inputValue}
                                     onChange={handleInputChange}
@@ -118,17 +119,23 @@ function Create() {
                             <p className="font-bold text-[24px] m-2">
                                 Time state
                             </p>
-                            <input
-                                className="bg-[#F2F2F2] rounded-[80px] h-[60px] w-[340px] text-[20px] font-bold pl-5 focus:outline-[#055532]"
-                                placeholder="Enter time state..."
-                            />
+                            <select
+                                name="select"
+                                className="h-[60px] w-[150px] bg-[#F2F2F2] text-[20px] text-[#055532] font-bold flex justify-center items-center text-center rounded-3xl"
+                            >
+                                <option value="value5">urgently</option>
+                                <option value="value6" selected>
+                                    Not urgent
+                                </option>
+                                <option value="value7">not required</option>
+                            </select>
                         </div>
                         <div className="ml-6 mt-8">
                             <p className="font-bold text-[24px] m-2">
                                 Amount of workers
                             </p>
                             <input
-                                className="bg-[#F2F2F2] rounded-[80px] h-[60px] w-[140px] text-[20px] font-bold text-center focus:outline-[#055532]"
+                                className="bg-[#F2F2F2] rounded-[80px] h-[60px] text-[#055532] w-[140px] text-[20px] font-bold text-center focus:outline-[#055532]"
                                 placeholder="..."
                             />
                         </div>
@@ -138,7 +145,7 @@ function Create() {
                             </p>
                             <div className="flex flex-row gap-2 items-center">
                                 <input
-                                    className="bg-[#F2F2F2] rounded-[80px] h-[50px] w-[150px] text-[16px] font-bold pl-5 focus:outline-[#055532] "
+                                    className="bg-[#F2F2F2] rounded-[80px] text-[#055532] h-[50px] w-[150px] text-[16px] font-bold pl-5 focus:outline-[#055532] "
                                     type="text"
                                     value={inputValue1}
                                     onChange={handleInputChange1}
@@ -165,7 +172,7 @@ function Create() {
                             placeholder="Enter vacancy name..."
                         />
                         <label className="block">
-                            <div className="bg-[#F2F2F2] border-[3px] border-[#055532] border-dashed ml-[15px] w-[940px] h-[340px] rounded-[48px] cursor-pointer mt-8">
+                            <div className="bg-[#F2F2F2] border-[3px] border-[#055532] border-dashed  w-[940px] h-[340px] rounded-[48px] cursor-pointer mt-8">
                                 <img
                                     src={icons.uploadFile}
                                     alt="Upload Icon"

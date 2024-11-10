@@ -8,7 +8,7 @@ function Profile() {
   return (
     <main>
   <Header />
-  <div className="mt-8 flex flex-col">
+  <div className="mt-8 flex ">
     <div className="ml-8 w-[30vw] flex flex-col">
       <img src={images.avatar} className="h-[256px] w-[256px]" alt="Avatar" />
       <div className="flex items-center gap-2 mt-8">
@@ -40,8 +40,8 @@ function Profile() {
       <a className='text-blue-600 whitespace-pre-line'>{data.email}</a>
     </div>
     </div>
-    <div>
-
+    <div className='w-[1200px] h-[900px] bg-[#F7F7F7] rounded-3xl'>
+      
     </div>
     
   </div>
